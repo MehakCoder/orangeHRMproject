@@ -93,7 +93,7 @@ public class DashboardTest extends BaseTest {
         );
       
     }
-    @Test
+    @Test(priority = 5)
     public void verifyMyActionsLinks() {
 
         MyActionDashboard dashboard = new MyActionDashboard(driver);

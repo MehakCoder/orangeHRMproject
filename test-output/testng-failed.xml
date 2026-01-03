@@ -5,17 +5,10 @@
     <classes>
       <class name="testcases.DashboardTest">
         <methods>
-          <include name="verifyEmployeesOnLeaveTodayCard"/>
-          <include name="verifyDashboardHeading"/>
+          <include name="verifyMyActionsLinks"/>
           <include name="setUp"/>
           <include name="tearDown"/>
-          <include name="verifyEmployeeDistributionBySubUnit"/>
-          <include name="verifyEmployeeDistributionByLocation"/>
-          <include name="verifyMyActionsCard"/>
-          <include name="verifyQuickLaunchCard"/>
           <include name="loginAndOpenDashboard"/>
-          <include name="verifyLatestPostsCard"/>
-          <include name="verifyTimeAtWorkCard"/>
         </methods>
       </class> <!-- testcases.DashboardTest -->
     </classes>

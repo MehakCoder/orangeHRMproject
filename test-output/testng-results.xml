@@ -1,93 +1,229 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="5" passed="5" failed="0" skipped="0">
+<testng-results ignored="0" total="9" passed="8" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2026-01-03T07:13:08 IST" name="Default suite" finished-at="2026-01-03T07:14:09 IST" duration-ms="60901">
+  <suite started-at="2026-01-03T08:40:43 IST" name="Default suite" finished-at="2026-01-03T08:43:40 IST" duration-ms="176571">
     <groups>
     </groups>
-    <test started-at="2026-01-03T07:13:08 IST" name="Default test" finished-at="2026-01-03T07:14:09 IST" duration-ms="60901">
-      <class name="testcases.Login_test">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:testcases.Login_test@4116aac9]" started-at="2026-01-03T07:13:08 IST" name="setUp" finished-at="2026-01-03T07:13:25 IST" duration-ms="17547" status="PASS">
+    <test started-at="2026-01-03T08:40:43 IST" name="Default test" finished-at="2026-01-03T08:43:40 IST" duration-ms="176571">
+      <class name="testcases.DashboardTest">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:testcases.DashboardTest@1a677343]" started-at="2026-01-03T08:40:43 IST" name="setUp" finished-at="2026-01-03T08:40:57 IST" duration-ms="13634" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method is-config="true" signature="openLoginPage()[pri:0, instance:testcases.Login_test@4116aac9]" started-at="2026-01-03T07:13:25 IST" name="openLoginPage" finished-at="2026-01-03T07:13:26 IST" duration-ms="688" status="PASS">
+        <test-method is-config="true" signature="loginAndOpenDashboard()[pri:0, instance:testcases.DashboardTest@1a677343]" started-at="2026-01-03T08:40:57 IST" name="loginAndOpenDashboard" finished-at="2026-01-03T08:41:07 IST" duration-ms="10763" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- openLoginPage -->
-        <test-method signature="validLoginTest()[pri:1, instance:testcases.Login_test@4116aac9]" started-at="2026-01-03T07:13:26 IST" name="validLoginTest" finished-at="2026-01-03T07:13:31 IST" duration-ms="4612" status="PASS">
+        </test-method> <!-- loginAndOpenDashboard -->
+        <test-method signature="verifyDashboardHeading()[pri:1, instance:testcases.DashboardTest@1a677343]" started-at="2026-01-03T08:41:07 IST" name="verifyDashboardHeading" finished-at="2026-01-03T08:41:07 IST" duration-ms="32" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- validLoginTest -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:testcases.Login_test@4116aac9]" started-at="2026-01-03T07:13:31 IST" name="tearDown" finished-at="2026-01-03T07:13:31 IST" duration-ms="163" status="PASS">
+        </test-method> <!-- verifyDashboardHeading -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:testcases.DashboardTest@1a677343]" started-at="2026-01-03T08:41:07 IST" name="tearDown" finished-at="2026-01-03T08:41:08 IST" duration-ms="142" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:testcases.Login_test@4116aac9]" started-at="2026-01-03T07:13:31 IST" name="setUp" finished-at="2026-01-03T07:13:37 IST" duration-ms="6298" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:testcases.DashboardTest@1a677343]" started-at="2026-01-03T08:41:08 IST" name="setUp" finished-at="2026-01-03T08:41:24 IST" duration-ms="16206" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method is-config="true" signature="openLoginPage()[pri:0, instance:testcases.Login_test@4116aac9]" started-at="2026-01-03T07:13:37 IST" name="openLoginPage" finished-at="2026-01-03T07:13:38 IST" duration-ms="647" status="PASS">
+        <test-method is-config="true" signature="loginAndOpenDashboard()[pri:0, instance:testcases.DashboardTest@1a677343]" started-at="2026-01-03T08:41:24 IST" name="loginAndOpenDashboard" finished-at="2026-01-03T08:41:34 IST" duration-ms="10600" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- openLoginPage -->
-        <test-method signature="invalidLoginTest()[pri:2, instance:testcases.Login_test@4116aac9]" started-at="2026-01-03T07:13:38 IST" name="invalidLoginTest" finished-at="2026-01-03T07:13:42 IST" duration-ms="4101" status="PASS">
+        </test-method> <!-- loginAndOpenDashboard -->
+        <test-method signature="verifyTimeAtWorkCard()[pri:2, instance:testcases.DashboardTest@1a677343]" started-at="2026-01-03T08:41:34 IST" name="verifyTimeAtWorkCard" finished-at="2026-01-03T08:41:34 IST" duration-ms="40" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- invalidLoginTest -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:testcases.Login_test@4116aac9]" started-at="2026-01-03T07:13:42 IST" name="tearDown" finished-at="2026-01-03T07:13:42 IST" duration-ms="169" status="PASS">
+        </test-method> <!-- verifyTimeAtWorkCard -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:testcases.DashboardTest@1a677343]" started-at="2026-01-03T08:41:34 IST" name="tearDown" finished-at="2026-01-03T08:41:35 IST" duration-ms="155" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:testcases.Login_test@4116aac9]" started-at="2026-01-03T07:13:42 IST" name="setUp" finished-at="2026-01-03T07:13:48 IST" duration-ms="6430" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:testcases.DashboardTest@1a677343]" started-at="2026-01-03T08:41:35 IST" name="setUp" finished-at="2026-01-03T08:41:41 IST" duration-ms="6842" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method is-config="true" signature="openLoginPage()[pri:0, instance:testcases.Login_test@4116aac9]" started-at="2026-01-03T07:13:48 IST" name="openLoginPage" finished-at="2026-01-03T07:13:49 IST" duration-ms="686" status="PASS">
+        <test-method is-config="true" signature="loginAndOpenDashboard()[pri:0, instance:testcases.DashboardTest@1a677343]" started-at="2026-01-03T08:41:41 IST" name="loginAndOpenDashboard" finished-at="2026-01-03T08:41:52 IST" duration-ms="10249" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- openLoginPage -->
-        <test-method signature="emptyFieldsTest()[pri:3, instance:testcases.Login_test@4116aac9]" started-at="2026-01-03T07:13:49 IST" name="emptyFieldsTest" finished-at="2026-01-03T07:13:51 IST" duration-ms="1668" status="PASS">
+        </test-method> <!-- loginAndOpenDashboard -->
+        <test-method signature="verifyLatestPostsCard()[pri:3, instance:testcases.DashboardTest@1a677343]" started-at="2026-01-03T08:41:52 IST" name="verifyLatestPostsCard" finished-at="2026-01-03T08:41:52 IST" duration-ms="34" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- emptyFieldsTest -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:testcases.Login_test@4116aac9]" started-at="2026-01-03T07:13:51 IST" name="tearDown" finished-at="2026-01-03T07:13:51 IST" duration-ms="162" status="PASS">
+        </test-method> <!-- verifyLatestPostsCard -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:testcases.DashboardTest@1a677343]" started-at="2026-01-03T08:41:52 IST" name="tearDown" finished-at="2026-01-03T08:41:52 IST" duration-ms="188" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:testcases.Login_test@4116aac9]" started-at="2026-01-03T07:13:51 IST" name="setUp" finished-at="2026-01-03T07:13:56 IST" duration-ms="4741" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:testcases.DashboardTest@1a677343]" started-at="2026-01-03T08:41:52 IST" name="setUp" finished-at="2026-01-03T08:41:57 IST" duration-ms="4892" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method is-config="true" signature="openLoginPage()[pri:0, instance:testcases.Login_test@4116aac9]" started-at="2026-01-03T07:13:56 IST" name="openLoginPage" finished-at="2026-01-03T07:13:56 IST" duration-ms="702" status="PASS">
+        <test-method is-config="true" signature="loginAndOpenDashboard()[pri:0, instance:testcases.DashboardTest@1a677343]" started-at="2026-01-03T08:41:57 IST" name="loginAndOpenDashboard" finished-at="2026-01-03T08:42:07 IST" duration-ms="9680" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- openLoginPage -->
-        <test-method signature="forgotPasswordTest()[pri:4, instance:testcases.Login_test@4116aac9]" started-at="2026-01-03T07:13:56 IST" name="forgotPasswordTest" finished-at="2026-01-03T07:13:59 IST" duration-ms="2316" status="PASS">
+        </test-method> <!-- loginAndOpenDashboard -->
+        <test-method signature="verifyMyActionsCard()[pri:3, instance:testcases.DashboardTest@1a677343]" started-at="2026-01-03T08:42:07 IST" name="verifyMyActionsCard" finished-at="2026-01-03T08:42:07 IST" duration-ms="32" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- forgotPasswordTest -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:testcases.Login_test@4116aac9]" started-at="2026-01-03T07:13:59 IST" name="tearDown" finished-at="2026-01-03T07:13:59 IST" duration-ms="154" status="PASS">
+        </test-method> <!-- verifyMyActionsCard -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:testcases.DashboardTest@1a677343]" started-at="2026-01-03T08:42:07 IST" name="tearDown" finished-at="2026-01-03T08:42:07 IST" duration-ms="186" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:testcases.Login_test@4116aac9]" started-at="2026-01-03T07:13:59 IST" name="setUp" finished-at="2026-01-03T07:14:04 IST" duration-ms="4938" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:testcases.DashboardTest@1a677343]" started-at="2026-01-03T08:42:07 IST" name="setUp" finished-at="2026-01-03T08:42:13 IST" duration-ms="6504" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method is-config="true" signature="openLoginPage()[pri:0, instance:testcases.Login_test@4116aac9]" started-at="2026-01-03T07:14:04 IST" name="openLoginPage" finished-at="2026-01-03T07:14:04 IST" duration-ms="706" status="PASS">
+        <test-method is-config="true" signature="loginAndOpenDashboard()[pri:0, instance:testcases.DashboardTest@1a677343]" started-at="2026-01-03T08:42:13 IST" name="loginAndOpenDashboard" finished-at="2026-01-03T08:42:23 IST" duration-ms="10190" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- openLoginPage -->
-        <test-method signature="verifyDashboardAfterLogin()[pri:5, instance:testcases.Login_test@4116aac9]" started-at="2026-01-03T07:14:04 IST" name="verifyDashboardAfterLogin" finished-at="2026-01-03T07:14:08 IST" duration-ms="3986" status="PASS">
+        </test-method> <!-- loginAndOpenDashboard -->
+        <test-method signature="verifyEmployeeDistributionByLocation()[pri:4, instance:testcases.DashboardTest@1a677343]" started-at="2026-01-03T08:42:23 IST" name="verifyEmployeeDistributionByLocation" finished-at="2026-01-03T08:42:23 IST" duration-ms="35" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyDashboardAfterLogin -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:testcases.Login_test@4116aac9]" started-at="2026-01-03T07:14:08 IST" name="tearDown" finished-at="2026-01-03T07:14:09 IST" duration-ms="137" status="PASS">
+        </test-method> <!-- verifyEmployeeDistributionByLocation -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:testcases.DashboardTest@1a677343]" started-at="2026-01-03T08:42:23 IST" name="tearDown" finished-at="2026-01-03T08:42:24 IST" duration-ms="183" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- testcases.Login_test -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:testcases.DashboardTest@1a677343]" started-at="2026-01-03T08:42:24 IST" name="setUp" finished-at="2026-01-03T08:42:29 IST" duration-ms="5049" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method is-config="true" signature="loginAndOpenDashboard()[pri:0, instance:testcases.DashboardTest@1a677343]" started-at="2026-01-03T08:42:29 IST" name="loginAndOpenDashboard" finished-at="2026-01-03T08:42:39 IST" duration-ms="9878" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginAndOpenDashboard -->
+        <test-method signature="verifyEmployeesOnLeaveTodayCard()[pri:4, instance:testcases.DashboardTest@1a677343]" started-at="2026-01-03T08:42:39 IST" name="verifyEmployeesOnLeaveTodayCard" finished-at="2026-01-03T08:42:39 IST" duration-ms="31" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyEmployeesOnLeaveTodayCard -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:testcases.DashboardTest@1a677343]" started-at="2026-01-03T08:42:39 IST" name="tearDown" finished-at="2026-01-03T08:42:39 IST" duration-ms="169" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:testcases.DashboardTest@1a677343]" started-at="2026-01-03T08:42:39 IST" name="setUp" finished-at="2026-01-03T08:42:43 IST" duration-ms="4625" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method is-config="true" signature="loginAndOpenDashboard()[pri:0, instance:testcases.DashboardTest@1a677343]" started-at="2026-01-03T08:42:43 IST" name="loginAndOpenDashboard" finished-at="2026-01-03T08:42:53 IST" duration-ms="9668" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginAndOpenDashboard -->
+        <test-method signature="verifyQuickLaunchCard()[pri:4, instance:testcases.DashboardTest@1a677343]" started-at="2026-01-03T08:42:53 IST" name="verifyQuickLaunchCard" finished-at="2026-01-03T08:42:53 IST" duration-ms="35" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyQuickLaunchCard -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:testcases.DashboardTest@1a677343]" started-at="2026-01-03T08:42:53 IST" name="tearDown" finished-at="2026-01-03T08:42:53 IST" duration-ms="165" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:testcases.DashboardTest@1a677343]" started-at="2026-01-03T08:42:53 IST" name="setUp" finished-at="2026-01-03T08:42:59 IST" duration-ms="6180" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method is-config="true" signature="loginAndOpenDashboard()[pri:0, instance:testcases.DashboardTest@1a677343]" started-at="2026-01-03T08:42:59 IST" name="loginAndOpenDashboard" finished-at="2026-01-03T08:43:09 IST" duration-ms="9827" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginAndOpenDashboard -->
+        <test-method signature="verifyEmployeeDistributionBySubUnit()[pri:5, instance:testcases.DashboardTest@1a677343]" started-at="2026-01-03T08:43:09 IST" name="verifyEmployeeDistributionBySubUnit" finished-at="2026-01-03T08:43:09 IST" duration-ms="33" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyEmployeeDistributionBySubUnit -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:testcases.DashboardTest@1a677343]" started-at="2026-01-03T08:43:09 IST" name="tearDown" finished-at="2026-01-03T08:43:09 IST" duration-ms="139" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:testcases.DashboardTest@1a677343]" started-at="2026-01-03T08:43:09 IST" name="setUp" finished-at="2026-01-03T08:43:14 IST" duration-ms="4628" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method is-config="true" signature="loginAndOpenDashboard()[pri:0, instance:testcases.DashboardTest@1a677343]" started-at="2026-01-03T08:43:14 IST" name="loginAndOpenDashboard" finished-at="2026-01-03T08:43:24 IST" duration-ms="9725" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginAndOpenDashboard -->
+        <test-method signature="verifyMyActionsLinks()[pri:5, instance:testcases.DashboardTest@1a677343]" started-at="2026-01-03T08:43:24 IST" name="verifyMyActionsLinks" finished-at="2026-01-03T08:43:39 IST" duration-ms="15626" status="FAIL">
+          <exception class="org.openqa.selenium.TimeoutException">
+            <message>
+              <![CDATA[Expected condition failed: waiting for element to be clickable: Proxy element for: DefaultElementLocator 'By.xpath: //p[text()='Pending Self Review']' (tried for 10 second(s) with 500 milliseconds interval)]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: Proxy element for: DefaultElementLocator 'By.xpath: //p[text()='Pending Self Review']' (tried for 10 second(s) with 500 milliseconds interval)
+at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+at projectobjects.MyActionDashboard.clickPendingSelfReview(MyActionDashboard.java:20)
+at testcases.DashboardTest.verifyMyActionsLinks(DashboardTest.java:102)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+at org.testng.TestRunner.privateRun(TestRunner.java:741)
+at org.testng.TestRunner.run(TestRunner.java:616)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//p[text()='Pending Self Review']"}
+  (Session info: chrome=143.0.7499.170)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
+Build info: version: '4.39.0', revision: '126f156aee'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '23.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [85e4533770dd52f0a9ba0f53f8aaef0b, findElement {using=xpath, value=//p[text()='Pending Self Review']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 143.0.7499.170, chrome: {chromedriverVersion: 143.0.7499.169 (164b20aab62..., userDataDir: C:\Users\mehak\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53948}, goog:processID: 18052, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:53948/devtoo..., se:cdpVersion: 143.0.7499.170, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 85e4533770dd52f0a9ba0f53f8aaef0b
+at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:501)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:485)
+at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:142)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:561)
+at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:166)
+at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:384)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:378)
+at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+at jdk.proxy2/jdk.proxy2.$Proxy12.isDisplayed(Unknown Source)
+at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:308)
+at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:294)
+at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:291)
+at org.openqa.selenium.support.ui.ExpectedConditions$23.apply(ExpectedConditions.java:662)
+at org.openqa.selenium.support.ui.ExpectedConditions$23.apply(ExpectedConditions.java:658)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:203)
+... 28 more
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.TimeoutException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyMyActionsLinks -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:testcases.DashboardTest@1a677343]" started-at="2026-01-03T08:43:39 IST" name="tearDown" finished-at="2026-01-03T08:43:40 IST" duration-ms="144" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- testcases.DashboardTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
