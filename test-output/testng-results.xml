@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="5" passed="5" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2026-01-03T07:13:08 IST" name="Default suite" finished-at="2026-01-03T07:14:09 IST" duration-ms="60901">
+    <groups>
+    </groups>
+    <test started-at="2026-01-03T07:13:08 IST" name="Default test" finished-at="2026-01-03T07:14:09 IST" duration-ms="60901">
+      <class name="testcases.Login_test">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:testcases.Login_test@4116aac9]" started-at="2026-01-03T07:13:08 IST" name="setUp" finished-at="2026-01-03T07:13:25 IST" duration-ms="17547" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method is-config="true" signature="openLoginPage()[pri:0, instance:testcases.Login_test@4116aac9]" started-at="2026-01-03T07:13:25 IST" name="openLoginPage" finished-at="2026-01-03T07:13:26 IST" duration-ms="688" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openLoginPage -->
+        <test-method signature="validLoginTest()[pri:1, instance:testcases.Login_test@4116aac9]" started-at="2026-01-03T07:13:26 IST" name="validLoginTest" finished-at="2026-01-03T07:13:31 IST" duration-ms="4612" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validLoginTest -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:testcases.Login_test@4116aac9]" started-at="2026-01-03T07:13:31 IST" name="tearDown" finished-at="2026-01-03T07:13:31 IST" duration-ms="163" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:testcases.Login_test@4116aac9]" started-at="2026-01-03T07:13:31 IST" name="setUp" finished-at="2026-01-03T07:13:37 IST" duration-ms="6298" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method is-config="true" signature="openLoginPage()[pri:0, instance:testcases.Login_test@4116aac9]" started-at="2026-01-03T07:13:37 IST" name="openLoginPage" finished-at="2026-01-03T07:13:38 IST" duration-ms="647" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openLoginPage -->
+        <test-method signature="invalidLoginTest()[pri:2, instance:testcases.Login_test@4116aac9]" started-at="2026-01-03T07:13:38 IST" name="invalidLoginTest" finished-at="2026-01-03T07:13:42 IST" duration-ms="4101" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- invalidLoginTest -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:testcases.Login_test@4116aac9]" started-at="2026-01-03T07:13:42 IST" name="tearDown" finished-at="2026-01-03T07:13:42 IST" duration-ms="169" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:testcases.Login_test@4116aac9]" started-at="2026-01-03T07:13:42 IST" name="setUp" finished-at="2026-01-03T07:13:48 IST" duration-ms="6430" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method is-config="true" signature="openLoginPage()[pri:0, instance:testcases.Login_test@4116aac9]" started-at="2026-01-03T07:13:48 IST" name="openLoginPage" finished-at="2026-01-03T07:13:49 IST" duration-ms="686" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openLoginPage -->
+        <test-method signature="emptyFieldsTest()[pri:3, instance:testcases.Login_test@4116aac9]" started-at="2026-01-03T07:13:49 IST" name="emptyFieldsTest" finished-at="2026-01-03T07:13:51 IST" duration-ms="1668" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- emptyFieldsTest -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:testcases.Login_test@4116aac9]" started-at="2026-01-03T07:13:51 IST" name="tearDown" finished-at="2026-01-03T07:13:51 IST" duration-ms="162" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:testcases.Login_test@4116aac9]" started-at="2026-01-03T07:13:51 IST" name="setUp" finished-at="2026-01-03T07:13:56 IST" duration-ms="4741" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method is-config="true" signature="openLoginPage()[pri:0, instance:testcases.Login_test@4116aac9]" started-at="2026-01-03T07:13:56 IST" name="openLoginPage" finished-at="2026-01-03T07:13:56 IST" duration-ms="702" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openLoginPage -->
+        <test-method signature="forgotPasswordTest()[pri:4, instance:testcases.Login_test@4116aac9]" started-at="2026-01-03T07:13:56 IST" name="forgotPasswordTest" finished-at="2026-01-03T07:13:59 IST" duration-ms="2316" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- forgotPasswordTest -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:testcases.Login_test@4116aac9]" started-at="2026-01-03T07:13:59 IST" name="tearDown" finished-at="2026-01-03T07:13:59 IST" duration-ms="154" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:testcases.Login_test@4116aac9]" started-at="2026-01-03T07:13:59 IST" name="setUp" finished-at="2026-01-03T07:14:04 IST" duration-ms="4938" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method is-config="true" signature="openLoginPage()[pri:0, instance:testcases.Login_test@4116aac9]" started-at="2026-01-03T07:14:04 IST" name="openLoginPage" finished-at="2026-01-03T07:14:04 IST" duration-ms="706" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openLoginPage -->
+        <test-method signature="verifyDashboardAfterLogin()[pri:5, instance:testcases.Login_test@4116aac9]" started-at="2026-01-03T07:14:04 IST" name="verifyDashboardAfterLogin" finished-at="2026-01-03T07:14:08 IST" duration-ms="3986" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyDashboardAfterLogin -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:testcases.Login_test@4116aac9]" started-at="2026-01-03T07:14:08 IST" name="tearDown" finished-at="2026-01-03T07:14:09 IST" duration-ms="137" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- testcases.Login_test -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
