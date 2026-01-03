@@ -5,7 +5,10 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 import projectobjects.Dashboard;
+import projectobjects.LeavePage;
 import projectobjects.Login_page;
+import projectobjects.Quicklaunch;
+import projectobjects.TimesheetPage;
 
 public class DashboardTest extends BaseTest {
 
@@ -89,5 +92,31 @@ public class DashboardTest extends BaseTest {
                 dashboard.isEmpDistByLocationDisplayed(),
                 "Employee Distribution by Location is not displayed"
         );
+    }
+    
+    // Test cases of Quick launch
+    @Test(priority = 3)
+    public void verifyQuickLaunchApplyLeave() {
+    	Dashboard dashboard = new Dashboard(driver);
+    	dashboard.waitForDashboardLoad();
+    	
+    	Quicklaunch quicklaunch = new Quicklaunch(driver);
+    	LeavePage leavepage = quicklaunch.clickApplyLeave();
+    	
+    	Assert.assertTrue(leavepage.isLeavePageOpened(),
+                "Apply Leave did not navigate to Leave page");
+    }
+    
+    @Test(priority = 4)
+    public void verifyQuickLaunchMyTimesheet() {
+
+        Dashboard dashboard = new Dashboard(driver);
+        dashboard.waitForDashboardLoad();
+
+        Quicklaunch quicklaunch = new Quicklaunch(driver);
+        TimesheetPage timesheetPage = quicklaunch.clickMyTimesheet();
+
+        Assert.assertTrue(timesheetPage.isTimesheetPageOpened(),
+                "My Timesheet did not navigate to Timesheet page");
     }
 }

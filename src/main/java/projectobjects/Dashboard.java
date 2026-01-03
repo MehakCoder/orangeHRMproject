@@ -42,24 +42,7 @@ public class Dashboard {
     @FindBy(xpath = "//p[normalize-space()='Employee Distribution by Location']")
     private WebElement empDistLocation;
 
- // ========= QUICK LAUNCH =========
-    @FindBy(xpath = "//p[text()='Assign Leave']")
-    protected WebElement assignLeave;
-
-    @FindBy(xpath = "//p[text()='Leave List']")
-    protected WebElement leaveList;
-
-    @FindBy(xpath = "//p[text()='Timesheets']")
-    protected WebElement timesheets;
-
-    @FindBy(xpath = "//p[text()='Apply Leave']")
-    protected WebElement applyLeave;
-
-    @FindBy(xpath = "//p[text()='My Leave']")
-    protected WebElement myLeave;
-
-    @FindBy(xpath = "//p[text()='My Timesheet']")
-    protected WebElement myTimesheet;
+ 
    
     
 
