@@ -6,6 +6,8 @@ import org.testng.annotations.Test;
 
 import projectobjects.Dashboard;
 import projectobjects.Login_page;
+import projectobjects.MyActionDashboard;
+
 
 public class DashboardTest extends BaseTest {
 
@@ -89,5 +91,23 @@ public class DashboardTest extends BaseTest {
                 dashboard.isEmpDistByLocationDisplayed(),
                 "Employee Distribution by Location is not displayed"
         );
+      
+    }
+    @Test
+    public void verifyMyActionsLinks() {
+
+        MyActionDashboard dashboard = new MyActionDashboard(driver);
+
+        // Pending Self Review
+        dashboard.clickPendingSelfReview();
+        Assert.assertTrue(dashboard.isManageReviewsDisplayed(),
+                "Manage Reviews page is not displayed");
+
+        driver.navigate().back();
+
+        // Candidate to Interview
+        dashboard.clickCandidateToInterview();
+        Assert.assertTrue(dashboard.isRecruitmentPageDisplayed(),
+                "Recruitment page is not displayed");
     }
 }

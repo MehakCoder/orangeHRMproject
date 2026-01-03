@@ -42,8 +42,21 @@ public class Dashboard {
     @FindBy(xpath = "//p[normalize-space()='Employee Distribution by Location']")
     private WebElement empDistLocation;
 
+    // ===== My Actions section =====
 
-   //commit
+    @FindBy(xpath = "//p[text()='Pending Self Review']")
+    protected WebElement pendingSelfReview;
+
+    @FindBy(xpath = "//p[text()='Candidate to Interview']")
+    protected WebElement candidateToInterview;
+
+    // ===== Page verification headers =====
+
+    @FindBy(xpath = "//h6[text()='Manage Reviews']")
+    protected WebElement manageReviewsHeader;
+
+    @FindBy(xpath = "//h6[text()='Recruitment']")
+    protected WebElement recruitmentHeader;
     
 
     // ================= Constructor =================
