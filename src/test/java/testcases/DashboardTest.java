@@ -1,6 +1,7 @@
 package testcases;
 
 import org.testng.Assert;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
@@ -11,7 +12,7 @@ public class DashboardTest extends BaseTest {
 
     private Dashboard dashboard;
 
-    @BeforeMethod
+    @Test(priority = 0)
     public void loginAndOpenDashboard() {
 
         // Step 1: Login
@@ -23,6 +24,8 @@ public class DashboardTest extends BaseTest {
 
         // Step 3: Wait for dashboard to load fully
         dashboard.waitForDashboardLoad();
+        
+        System.out.println();
     }
 
     // ================= TEST CASES =================

@@ -7,15 +7,19 @@ import java.util.Properties;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 
 public class BaseTest {
 
     protected WebDriver driver;
     protected Properties prop;
+    static int i=0;
+    
 
-    @BeforeMethod
+    @BeforeClass
     public void setUp() throws IOException {
 
         // 1️⃣ Launch browser
@@ -30,11 +34,18 @@ public class BaseTest {
         prop = new Properties();
         prop.load(fs);
 
-        // 3️⃣ Open application URL ONLY
+        // 3️⃣ Open application URL ONLYBefore
         driver.get(prop.getProperty("url"));
+        
     }
-
-    @AfterMethod
+    
+    @BeforeMethod
+    public void beforeMethod()
+    {
+    	System.out.println("Before method");
+    }
+    
+    @AfterClass
     public void tearDown() {
         if (driver != null) {
             driver.quit();
