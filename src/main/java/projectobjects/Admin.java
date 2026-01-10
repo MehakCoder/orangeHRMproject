@@ -122,5 +122,11 @@ public class Admin {
 	        }
 	    }
 	}
-
+	//linkedpage
+	public UserManagmentpage goToUserManagement() {
+        wait.until(ExpectedConditions.elementToBeClickable(UserManagment)).click();
+        return new UserManagmentpage();
+    }
 }
+
+
