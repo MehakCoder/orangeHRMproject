@@ -12,6 +12,8 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 
+import projectobjects.Login_page;
+
 public class BaseTest {
 
     protected WebDriver driver;
@@ -38,6 +40,12 @@ public class BaseTest {
         driver.get(prop.getProperty("url"));
         
     }
+    @BeforeMethod
+    public void setupLogin() {
+        Login_page login = new Login_page(driver);
+        login.login("Admin", "admin123");
+    }
+
     
     @BeforeMethod
     public void beforeMethod()

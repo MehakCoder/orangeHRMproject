@@ -61,11 +61,17 @@ public class Login_page {
         loginButton.click();
     }
 
-    public void login(String username, String password) {
-        enterUsername(username);
-        enterPassword(password);
+    public void login(String user, String pass) {
+
+        if (!isLoginPageDisplayed()) {
+            return; // already logged in
+        }
+
+        enterUsername(user);
+        enterPassword(pass);
         clickLogin();
     }
+
 
     public void clickForgotPassword() {
         wait.until(ExpectedConditions.elementToBeClickable(forgotPasswordLink));
@@ -76,6 +82,11 @@ public class Login_page {
         wait.until(ExpectedConditions.visibilityOf(errorMessage));
         return errorMessage.getText();
     }
+    
+    public boolean isLoginPageDisplayed() {
+        return driver.getCurrentUrl().contains("login");
+    }
+
 
     public boolean isRequiredErrorDisplayed() {
         wait.until(ExpectedConditions.visibilityOf(requiredError));

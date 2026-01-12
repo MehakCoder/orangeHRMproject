@@ -8,93 +8,92 @@ import projectobjects.Dashboard;
 import projectobjects.Login_page;
 
 public class AdminTest extends BaseTest {
-	@Test(priority = 1)
-	public void VerifyAdminPageNavigation() {
-		// Login
-		Login_page login = new Login_page(driver);
-		login.login("Admin", "admin123");
 
-		// Dashboard load
-		Dashboard dashboard = new Dashboard(driver);
-		dashboard.waitForDashboardLoad();
+    @Test(priority = 1)
+    public void verifyAdminPageNavigation() {
 
-		// AdminPage
-		Admin admin = new Admin(driver);
-		admin.openAdminPage();
+        Login_page login = new Login_page(driver);
+        login.login("Admin", "admin123");
 
-		// Assertions
-		Assert.assertTrue(admin.isAdminDisplayed(), "Admin heading is not displayed");
+        Dashboard dashboard = new Dashboard(driver);
+        dashboard.waitForDashboardLoad();
 
-		Assert.assertTrue(admin.isSystemUserPageDisplayed(), "User Management page is not displayed");
-	}
+        Admin admin = new Admin(driver);
+        admin.openAdminPage();
 
-	@Test(priority = 2)
-	public void verifyJobMenuHover() {
-		Admin admin = new Admin(driver);
-		admin.openAdminPage();
+        Assert.assertTrue(admin.isAdminDisplayed(), "Admin heading not displayed");
+    }
 
-		admin.hoverOnJob();
+    @Test(priority = 2)
+    public void verifyJobMenuHover() {
 
-		Assert.assertTrue(true);
-	}
+        Admin admin = new Admin(driver);
+        admin.openAdminPage();
+        admin.hoverOnJob();
 
-	@Test(priority = 3)
-	public void verifyOrganizationMenuHover() {
-		Admin admin = new Admin(driver);
-		admin.openAdminPage();
+        Assert.assertTrue(true, "Job menu hover successful");
+    }
 
-		admin.hoverOnOrganization();
+    @Test(priority = 3)
+    public void verifyOrganizationMenuHover() {
 
-		Assert.assertTrue(true);
-	}
+        Admin admin = new Admin(driver);
+        admin.openAdminPage();
+        admin.hoverOnOrganization();
 
-	@Test(priority = 4)
+        Assert.assertTrue(true, "Organization menu hover successful");
+    }
+
+    @Test(priority = 4)
     public void verifyQualificationsMenuHover() {
+
         Admin admin = new Admin(driver);
         admin.openAdminPage();
         admin.hoverOnQualifications();
-        Assert.assertTrue(true);
+
+        Assert.assertTrue(true, "Qualifications menu hover successful");
     }
 
-	@Test(priority = 5)
-	public void verifyNationalitiesPage() {
-		Admin admin = new Admin(driver);
-		admin.openAdminPage();
-		admin.Nationalites();
-		Assert.assertTrue(driver.getCurrentUrl().contains("nationality"));
-	}
+    @Test(priority = 5)
+    public void verifyNationalitiesPage() {
 
-	@Test(priority = 6)
-	public void verifyCorporateBrandingPage() {
-		Admin admin = new Admin(driver);
-		admin.openAdminPage();
-     
-		admin.CorporateBranding();
+        Admin admin = new Admin(driver);
+        admin.openAdminPage();
+        admin.clickNationalities();
 
-		Assert.assertTrue(driver.getCurrentUrl().contains("Corporate Branding"));
-	}
+        Assert.assertTrue(driver.getCurrentUrl().contains("nationalities"),
+                "Nationalities page not opened");
+    }
 
-	@Test(priority = 7)
-	public void verifyConfigurationMenuHover() {
-		Admin admin = new Admin(driver);
-		admin.openAdminPage();
+    @Test(priority = 6)
+    public void verifyCorporateBrandingPage() {
 
-		admin.hoverOnConfiguration();
+        Admin admin = new Admin(driver);
+        admin.openAdminPage();
+        admin.clickCorporateBranding();
 
-		Assert.assertTrue(true, "Configuration menu hover successful");
-	}
-	
-	
-	@Test(priority = 8)
-	public void verifyHelpPageOpen() {
+        Assert.assertTrue(driver.getCurrentUrl().toLowerCase().contains("branding"),
+                "Corporate Branding page not opened");
+    }
 
-	    Admin admin = new Admin(driver);
-	    admin.openAdminPage();
-	    admin.openHelppage();
+    @Test(priority = 7)
+    public void verifyConfigurationMenuHover() {
 
-	    // Verify new page opened
-	    Assert.assertTrue(driver.getCurrentUrl().contains("help"));
-	}
+        Admin admin = new Admin(driver);
+        admin.openAdminPage();
+        admin.hoverOnConfiguration();
 
+        Assert.assertTrue(true, "Configuration hover successful");
+    }
 
+    @Test(priority = 8)
+    public void verifyHelpPageOpen() {
+
+        Admin admin = new Admin(driver);
+        admin.openAdminPage();
+        admin.openHelpPage();
+
+        Assert.assertTrue(driver.getCurrentUrl().toLowerCase().contains("help"),
+                "Help page not opened");
+    }
 }

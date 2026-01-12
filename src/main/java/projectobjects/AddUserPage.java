@@ -11,16 +11,22 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class AddUserPage {
+
 	private WebDriver driver;
 	private WebDriverWait wait;
 
-	public AddUserPage() {
+	// -------- Constructor --------
+	public AddUserPage(WebDriver driver) {
 		this.driver = driver;
 		PageFactory.initElements(driver, this);
 		wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 	}
 
-	// User Role dropdown
+	// -------- Page Validation --------
+	@FindBy(xpath = "//h6[text()='Add User']")
+	private WebElement addUserHeading;
+
+	// -------- WebElements --------
 	@FindBy(xpath = "//label[text()='User Role']/../following-sibling::div")
 	private WebElement userRoleDropdown;
 
@@ -45,44 +51,41 @@ public class AddUserPage {
 	@FindBy(xpath = "//button[normalize-space()='Cancel']")
 	private WebElement cancelButton;
 
-	// -------------- Actions -------------------//
+	// -------- Actions --------
+	public boolean isAddUserPageDisplayed() {
+		return wait.until(ExpectedConditions.visibilityOf(addUserHeading)).isDisplayed();
+	}
 
 	public void selectUserRole(String role) {
 		wait.until(ExpectedConditions.elementToBeClickable(userRoleDropdown)).click();
-
-		WebElement option = wait
-				.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[text()='" + role + "']")));
-		option.click();
+		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[text()='" + role + "']"))).click();
 	}
 
 	public void selectStatus(String status) {
 		wait.until(ExpectedConditions.elementToBeClickable(statusDropdown)).click();
-
-		WebElement option = wait
-				.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[text()='" + status + "']")));
-		option.click();
+		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[text()='" + status + "']"))).click();
 	}
 
 	public void enterEmployeeName(String name) {
-		employeeName.sendKeys("admin");
-		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[contains(text(),'" + name + "')]")))
+		wait.until(ExpectedConditions.visibilityOf(employeeName)).sendKeys(name);
+		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[contains(text(),'" + name + "')]")))
 				.click();
 	}
 
 	public void enterUsername(String uname) {
-		username.sendKeys(uname);
+		wait.until(ExpectedConditions.visibilityOf(username)).sendKeys(uname);
 	}
 
 	public void enterPassword(String pwd) {
-		password.sendKeys(pwd);
+		wait.until(ExpectedConditions.visibilityOf(password)).sendKeys(pwd);
 		confirmPassword.sendKeys(pwd);
 	}
 
 	public void clickSave() {
-		saveButton.click();
+		wait.until(ExpectedConditions.elementToBeClickable(saveButton)).click();
 	}
 
 	public void clickCancel() {
-		cancelButton.click();
+		wait.until(ExpectedConditions.elementToBeClickable(cancelButton)).click();
 	}
 }
