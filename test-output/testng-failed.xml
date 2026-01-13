@@ -3,16 +3,20 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="testcases.UserManagementPageTest">
+      <class name="testcases.AdminTest">
         <methods>
-          <include name="beforeMethod"/>
-          <include name="setUp"/>
+          <include name="setup"/>
+          <include name="verifyOrganizationMenuHover"/>
+          <include name="verifyQualificationsMenuHover"/>
           <include name="tearDown"/>
-          <include name="verifyAddUserNavigation"/>
-          <include name="verifySearchUserByUsername"/>
-          <include name="verifyResetButton"/>
+          <include name="verifyCorporateBrandingPage"/>
+          <include name="verifyHelpPageOpen"/>
+          <include name="verifyNationalitiesPage"/>
+          <include name="verifyAdminPageNavigation"/>
+          <include name="verifyJobMenuHover"/>
+          <include name="verifyConfigurationMenuHover"/>
         </methods>
-      </class> <!-- testcases.UserManagementPageTest -->
+      </class> <!-- testcases.AdminTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

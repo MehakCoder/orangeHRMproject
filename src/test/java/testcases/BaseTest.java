@@ -7,56 +7,39 @@ import java.util.Properties;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.testng.annotations.AfterClass;
-import org.testng.annotations.AfterMethod;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.BeforeClass;
-import org.testng.annotations.BeforeMethod;
-
-import projectobjects.Login_page;
+import org.testng.annotations.AfterClass;
 
 public class BaseTest {
 
     protected WebDriver driver;
+    protected WebDriverWait wait;
     protected Properties prop;
-    static int i=0;
-    
 
     @BeforeClass
-    public void setUp() throws IOException {
+    public void setup() throws IOException {
 
-        // 1️⃣ Launch browser
+        // ✅ Initialize Properties
+        prop = new Properties();
+        FileInputStream fis = new FileInputStream(
+                System.getProperty("user.dir") + "/src/test/resources/config.properties"
+        );
+        prop.load(fis);
+
+        // ✅ Initialize Driver
         driver = new ChromeDriver();
         driver.manage().window().maximize();
-        driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(30));
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
 
-        // 2️⃣ Load config
-        FileInputStream fs = new FileInputStream(
-                "D:\\seleniumwebdriver\\Automationproject\\organehrm\\src\\main\\java\\configration\\config.properties");
-        prop = new Properties();
-        prop.load(fs);
+        // ✅ Initialize Wait
+        wait = new WebDriverWait(driver, Duration.ofSeconds(15));
 
-        // 3️⃣ Open application URL ONLYBefore
+        // ✅ Open URL
         driver.get(prop.getProperty("url"));
-        
-    }
-    @BeforeMethod
-    public void setupLogin() {
-        Login_page login = new Login_page(driver);
-        login.login("Admin", "admin123");
     }
 
-    
-    @BeforeMethod
-    public void beforeMethod()
-    {
-    	System.out.println("Before method");
-    }
-    
     @AfterClass
     public void tearDown() {
-        if (driver != null) {
-            driver.quit();
-        }
+        driver.quit();
     }
 }

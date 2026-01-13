@@ -98,23 +98,8 @@ public class Admin {
         }
     }
 
-    public UserManagementPage goToUserManagement() {
-        wait.until(ExpectedConditions.elementToBeClickable(userManagementMenu)).click();
-        return new UserManagementPage(driver);
-    }
-    public UserManagementPage openUserManagementProperly() {
-
-        wait.until(ExpectedConditions.elementToBeClickable(adminMenu)).click();
-
-        WebElement userManagementTab = wait.until(
-            ExpectedConditions.elementToBeClickable(
-                By.xpath("//a[normalize-space()='User Management']")
-            )
-        );
-
-        userManagementTab.click();
-        return new UserManagementPage(driver);
-    }
+    
+    
 
 
 }
