@@ -3,15 +3,6 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="testcases.AdminTest">
-        <methods>
-          <include name="beforeMethod"/>
-          <include name="setUp"/>
-          <include name="verifyQualificationsMenuHover"/>
-          <include name="tearDown"/>
-          <include name="verifyCorporateBrandingPage"/>
-        </methods>
-      </class> <!-- testcases.AdminTest -->
       <class name="testcases.Login_test">
         <methods>
           <include name="beforeMethod"/>

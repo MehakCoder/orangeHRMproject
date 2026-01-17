@@ -55,11 +55,10 @@ public class Admin {
 	// configuration
 	@FindBy(xpath = "//span[normalize-space()='Configuration']")
 	private WebElement Configuration;
-	
-	//Help
+
+	// Help
 	@FindBy(xpath = "//button[@title='Help']")
 	private WebElement Helpbtn;
-	
 
 	/* ================= ACTION METHODS ================= */
 	public void openAdminPage() {
@@ -73,7 +72,6 @@ public class Admin {
 	public boolean isSystemUserPageDisplayed() {
 		return wait.until(ExpectedConditions.visibilityOf(UserManagment)).isDisplayed();
 	}
-	
 
 	public void hoverOnJob() {
 		Actions actions = new Actions(driver);
@@ -106,21 +104,26 @@ public class Admin {
 		wait.until(ExpectedConditions.visibilityOf(Configuration));
 		actions.moveToElement(Configuration).perform();
 	}
-	
+
 	public void openHelppage() {
 		// Store parent window
-	    String parentWindow = driver.getWindowHandle();
+		String parentWindow = driver.getWindowHandle();
 
-	    // Click Help
-	    wait.until(ExpectedConditions.elementToBeClickable(Helpbtn)).click();
+		// Click Help
+		wait.until(ExpectedConditions.elementToBeClickable(Helpbtn)).click();
 
-	    // Switch to new window
-	    for (String window : driver.getWindowHandles()) {
-	        if (!window.equals(parentWindow)) {
-	            driver.switchTo().window(window);
-	            break;
-	        }
-	    }
+		// Switch to new window
+		for (String window : driver.getWindowHandles()) {
+			if (!window.equals(parentWindow)) {
+				driver.switchTo().window(window);
+				break;
+			}
+		}
+	}
+
+	public void waitForAdminPageLoad() {
+		wait.until(ExpectedConditions.visibilityOf(AdminHeading));
+
 	}
 
 }
