@@ -9,6 +9,7 @@
 			<class name="testcases.AdminTest" />
 			<class name="testcases.PIMTest" />
 			<class name="testcases.LeaveTest" />
+			<class name="testcases.MyInfoTest" />
 
 
 		</classes>
