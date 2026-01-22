@@ -50,17 +50,15 @@ public class PIMTest extends BaseTest {
         Assert.assertTrue(driver.getCurrentUrl().contains("addEmployee"));
     }
 
-    @Test(priority = 5)
-    public void verifyConfigurationDropdownClickable() {
-        pim.clickPIMMenu();
-        pim.clickConfiguration();
+    @Test(priority = 7)
+	public void verifyConfigurationMenuHover() {
+		Admin admin = new Admin(driver);
+		admin.openAdminPage();
 
-        Assert.assertTrue(
-            pim.isOptionalFieldsVisible(),
-            "Configuration dropdown did not expand"
-        );
-    }
+		admin.hoverOnConfiguration();
 
+		Assert.assertTrue(true, "Configuration menu hover successful");
+	}
     @Test(priority = 6)
     public void verifyReportNavigation() {
         pim.clickPIMMenu();

@@ -5,6 +5,7 @@ import java.time.Duration;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -28,8 +29,9 @@ public class PIM {
     @FindBy(xpath = "//h6[@class='oxd-text oxd-text--h6 oxd-topbar-header-breadcrumb-module']")
     private WebElement PIMHeading;
 
-    @FindBy(xpath = "//span[text()='Configuration']")
-    private WebElement Configuration;
+    @FindBy(xpath = "//span[normalize-space()='Configuration']")
+	private WebElement Configuration;
+
  // Configuration child item
     @FindBy(xpath = "//a[normalize-space()='Optional Fields']")
     private WebElement OptionalFields;
@@ -62,22 +64,11 @@ public class PIM {
         return PIMHeading.getText();
     }
 
-    public void clickConfiguration() {
-        // Ensure the PIM menu is open so the Configuration item is visible/clickable
-        if (!isConfigurationDisplayed()) {
-            clickPIMMenu();
-        }
-        wait.until(ExpectedConditions.elementToBeClickable(Configuration)).click();
-    }
-
-    public boolean isConfigurationDisplayed() {
-        try {
-            wait.until(ExpectedConditions.visibilityOf(Configuration));
-            return Configuration.isDisplayed();
-        } catch (Exception e) {
-            return false;
-        }
-    }
+    public void hoverOnConfiguration() {
+		Actions actions = new Actions(driver);
+		wait.until(ExpectedConditions.visibilityOf(Configuration));
+		actions.moveToElement(Configuration).perform();
+	}
 
     public boolean isOptionalFieldsVisible() {
         try {

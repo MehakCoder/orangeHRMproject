@@ -1,57 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
-  <listeners>
-    <listener class-name="listeners.TestListener"/>
-  </listeners>
-  <test thread-count="5" name="Test(failed)">
+<suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="testcases.DashboardTest">
-        <methods>
-          <include name="verifyEmployeesOnLeaveTodayCard"/>
-          <include name="verifyDashboardHeading"/>
-          <include name="beforeMethod"/>
-          <include name="setUp"/>
-          <include name="tearDown"/>
-          <include name="verifyEmployeeDistributionByLocation"/>
-          <include name="verifyEmployeeDistributionBySubUnit"/>
-          <include name="verifyMyActionsCard"/>
-          <include name="verifyQuickLaunchCard"/>
-          <include name="loginAndOpenDashboard"/>
-          <include name="verifyLatestPostsCard"/>
-          <include name="verifyTimeAtWorkCard"/>
-        </methods>
-      </class> <!-- testcases.DashboardTest -->
-      <class name="testcases.PIMTest">
-        <methods>
-          <include name="verifyConfigurationDropdownClickable"/>
-          <include name="beforeMethod"/>
-          <include name="setUp"/>
-          <include name="tearDown"/>
-          <include name="pimSetup"/>
-        </methods>
-      </class> <!-- testcases.PIMTest -->
-      <class name="testcases.AdminTest">
+      <class name="testcases.MyInfoTest">
         <methods>
           <include name="beforeMethod"/>
-          <include name="verifyQualificationsMenuHover"/>
-          <include name="setUp"/>
+          <include name="verifyMyInfoPageLoaded"/>
           <include name="tearDown"/>
-          <include name="verifyCorporateBrandingPage"/>
-        </methods>
-      </class> <!-- testcases.AdminTest -->
-      <class name="testcases.Login_test">
-        <methods>
-          <include name="beforeMethod"/>
+          <include name="verifyQualifications"/>
+          <include name="verifySalary"/>
+          <include name="verifyImmigration"/>
+          <include name="verifyReportTo"/>
+          <include name="verifyDependents"/>
           <include name="setUp"/>
-          <include name="tearDown"/>
-          <include name="openLoginPage"/>
-          <include name="invalidLoginTest"/>
-          <include name="forgotPasswordTest"/>
-          <include name="verifyDashboardAfterLogin"/>
-          <include name="emptyFieldsTest"/>
+          <include name="verifyPersonalDetails"/>
+          <include name="verifyMemberships"/>
+          <include name="setupTest"/>
+          <include name="verifyEmergencyContacts"/>
+          <include name="verifyJob"/>
         </methods>
-      </class> <!-- testcases.Login_test -->
+      </class> <!-- testcases.MyInfoTest -->
     </classes>
-  </test> <!-- Test(failed) -->
-</suite> <!-- Failed suite [Suite] -->
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->

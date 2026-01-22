@@ -3,18 +3,24 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="testcases.Login_test">
+      <class name="testcases.MyInfoTest">
         <methods>
           <include name="beforeMethod"/>
-          <include name="setUp"/>
+          <include name="verifyMyInfoPageLoaded"/>
           <include name="tearDown"/>
-          <include name="openLoginPage"/>
-          <include name="invalidLoginTest"/>
-          <include name="verifyDashboardAfterLogin"/>
-          <include name="forgotPasswordTest"/>
-          <include name="emptyFieldsTest"/>
+          <include name="verifyQualifications"/>
+          <include name="verifySalary"/>
+          <include name="verifyImmigration"/>
+          <include name="verifyReportTo"/>
+          <include name="verifyDependents"/>
+          <include name="setUp"/>
+          <include name="verifyPersonalDetails"/>
+          <include name="verifyMemberships"/>
+          <include name="setupTest"/>
+          <include name="verifyEmergencyContacts"/>
+          <include name="verifyJob"/>
         </methods>
-      </class> <!-- testcases.Login_test -->
+      </class> <!-- testcases.MyInfoTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

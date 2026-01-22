@@ -6,40 +6,6 @@
   </listeners>
   <test thread-count="5" name="Test(failed)">
     <classes>
-      <class name="testcases.DashboardTest">
-        <methods>
-          <include name="verifyEmployeesOnLeaveTodayCard"/>
-          <include name="verifyDashboardHeading"/>
-          <include name="beforeMethod"/>
-          <include name="setUp"/>
-          <include name="tearDown"/>
-          <include name="verifyEmployeeDistributionByLocation"/>
-          <include name="verifyEmployeeDistributionBySubUnit"/>
-          <include name="verifyMyActionsCard"/>
-          <include name="verifyQuickLaunchCard"/>
-          <include name="loginAndOpenDashboard"/>
-          <include name="verifyLatestPostsCard"/>
-          <include name="verifyTimeAtWorkCard"/>
-        </methods>
-      </class> <!-- testcases.DashboardTest -->
-      <class name="testcases.PIMTest">
-        <methods>
-          <include name="verifyConfigurationDropdownClickable"/>
-          <include name="beforeMethod"/>
-          <include name="setUp"/>
-          <include name="tearDown"/>
-          <include name="pimSetup"/>
-        </methods>
-      </class> <!-- testcases.PIMTest -->
-      <class name="testcases.AdminTest">
-        <methods>
-          <include name="beforeMethod"/>
-          <include name="verifyQualificationsMenuHover"/>
-          <include name="setUp"/>
-          <include name="tearDown"/>
-          <include name="verifyCorporateBrandingPage"/>
-        </methods>
-      </class> <!-- testcases.AdminTest -->
       <class name="testcases.Login_test">
         <methods>
           <include name="beforeMethod"/>
@@ -52,6 +18,15 @@
           <include name="emptyFieldsTest"/>
         </methods>
       </class> <!-- testcases.Login_test -->
+      <class name="testcases.AdminTest">
+        <methods>
+          <include name="beforeMethod"/>
+          <include name="verifyQualificationsMenuHover"/>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+          <include name="verifyCorporateBrandingPage"/>
+        </methods>
+      </class> <!-- testcases.AdminTest -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->
