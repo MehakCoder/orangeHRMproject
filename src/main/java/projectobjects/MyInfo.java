@@ -1,7 +1,6 @@
 package projectobjects;
 
 import java.time.Duration;
-
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -12,105 +11,120 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 public class MyInfo {
 
     private WebDriver driver;
-    private static WebDriverWait wait;
+    private WebDriverWait wait;
 
-    // ✅ CONSTRUCTOR
     public MyInfo(WebDriver driver) {
         this.driver = driver;
+        this.wait = new WebDriverWait(driver, Duration.ofSeconds(15));
         PageFactory.initElements(driver, this);
-        wait = new WebDriverWait(driver, Duration.ofSeconds(10));
     }
 
-    /* ---------- MENU ---------- */
+    /* ---------- SIDE MENU ---------- */
+
     @FindBy(xpath = "//span[text()='My Info']")
-    private WebElement myInfoMenu;
+    private WebElement myInfoSideMenu;
 
-    @FindBy(xpath = "//h6[text()='PIM']")
-    private WebElement myInfoHeading;
+    /* ---------- PAGE HEADERS ---------- */
 
-    /* ---------- SUB MENU ---------- */
+    @FindBy(xpath = "//h6[contains(@class,'oxd-topbar-header-breadcrumb-module')]")
+    private WebElement mainHeader;
+
+    @FindBy(xpath = "//h6[contains(@class,'orangehrm-main-title')]")
+    private WebElement sectionHeader;
+
+    /* ---------- MY INFO TABS ---------- */
+
     @FindBy(xpath = "//a[text()='Personal Details']")
-    private WebElement personalDetails;
+    private WebElement personalDetailsTab;
 
     @FindBy(xpath = "//a[text()='Contact Details']")
-    private WebElement contactDetails;
+    private WebElement contactDetailsTab;
 
     @FindBy(xpath = "//a[text()='Emergency Contacts']")
-    private static WebElement emergencyContacts;
+    private WebElement emergencyContactsTab;
 
     @FindBy(xpath = "//a[text()='Dependents']")
-    private static WebElement dependents;
+    private WebElement dependentsTab;
 
     @FindBy(xpath = "//a[text()='Immigration']")
-    private static WebElement immigration;
+    private WebElement immigrationTab;
 
     @FindBy(xpath = "//a[text()='Job']")
-    private WebElement job;
+    private WebElement jobTab;
 
     @FindBy(xpath = "//a[text()='Salary']")
-    private WebElement salary;
+    private WebElement salaryTab;
 
     @FindBy(xpath = "//a[text()='Report-to']")
-    private WebElement reportTo;
+    private WebElement reportTab;
 
     @FindBy(xpath = "//a[text()='Qualifications']")
-    private WebElement qualifications;
+    private WebElement qualificationsTab;
 
     @FindBy(xpath = "//a[text()='Memberships']")
-    private WebElement memberships;
+    private WebElement membershipsTab;
 
     /* ---------- ACTION METHODS ---------- */
 
     public void openMyInfo() {
-        wait.until(ExpectedConditions.elementToBeClickable(myInfoMenu)).click();
-    }
-   
-
-    public String getMyInfoHeading() {
-        return wait.until(ExpectedConditions.visibilityOf(myInfoHeading)).getText();
+        wait.until(ExpectedConditions.elementToBeClickable(myInfoSideMenu)).click();
+        wait.until(ExpectedConditions.visibilityOf(personalDetailsTab));
     }
 
-    public void goToPersonalDetails() {
-        wait.until(ExpectedConditions.elementToBeClickable(personalDetails)).click();
+    public void openPersonalDetails() {
+        wait.until(ExpectedConditions.elementToBeClickable(personalDetailsTab)).click();
+        wait.until(ExpectedConditions.textToBePresentInElement(sectionHeader, "Personal Details"));
     }
 
-    public void goToContactDetails() {
-        wait.until(ExpectedConditions.elementToBeClickable(contactDetails)).click();
+    public void openContactDetails() {
+        wait.until(ExpectedConditions.elementToBeClickable(contactDetailsTab)).click();
+        wait.until(ExpectedConditions.textToBePresentInElement(sectionHeader, "Contact Details"));
     }
 
-    public static void goToEmergencyContacts() {
-        wait.until(ExpectedConditions.elementToBeClickable(emergencyContacts)).click();
+    public void openEmergencyContacts() {
+        wait.until(ExpectedConditions.elementToBeClickable(emergencyContactsTab)).click();
+        wait.until(ExpectedConditions.textToBePresentInElement(sectionHeader, "Emergency Contacts"));
     }
 
-    public static void goToDependents() {
-        wait.until(ExpectedConditions.elementToBeClickable(dependents)).click();
+    public void openDependents() {
+        wait.until(ExpectedConditions.elementToBeClickable(dependentsTab)).click();
+        wait.until(ExpectedConditions.textToBePresentInElement(sectionHeader, "Dependents"));
     }
 
-    public static void goToImmigration() {
-        wait.until(ExpectedConditions.elementToBeClickable(immigration)).click();
+    public void openImmigration() {
+        wait.until(ExpectedConditions.elementToBeClickable(immigrationTab)).click();
+        wait.until(ExpectedConditions.textToBePresentInElement(sectionHeader, "Immigration"));
     }
 
-    public void goToJob() {
-        wait.until(ExpectedConditions.elementToBeClickable(job)).click();
+    public void openJob() {
+        wait.until(ExpectedConditions.elementToBeClickable(jobTab)).click();
+        wait.until(ExpectedConditions.textToBePresentInElement(sectionHeader, "Job"));
     }
 
-    public void goToSalary() {
-        wait.until(ExpectedConditions.elementToBeClickable(salary)).click();
+    public void openSalary() {
+        wait.until(ExpectedConditions.elementToBeClickable(salaryTab)).click();
+        wait.until(ExpectedConditions.textToBePresentInElement(sectionHeader, "Salary"));
     }
 
-    public void goToReportTo() {
-        wait.until(ExpectedConditions.elementToBeClickable(reportTo)).click();
+    public void openReportTo() {
+        wait.until(ExpectedConditions.elementToBeClickable(reportTab)).click();
+        wait.until(ExpectedConditions.textToBePresentInElement(sectionHeader, "Report-to"));
     }
 
-    public void goToQualifications() {
-        wait.until(ExpectedConditions.elementToBeClickable(qualifications)).click();
+    public void openQualifications() {
+        wait.until(ExpectedConditions.elementToBeClickable(qualificationsTab)).click();
+        wait.until(ExpectedConditions.textToBePresentInElement(sectionHeader, "Qualifications"));
     }
 
-    public void goToMemberships() {
-        wait.until(ExpectedConditions.elementToBeClickable(memberships)).click();
+    public void openMemberships() {
+        wait.until(ExpectedConditions.elementToBeClickable(membershipsTab)).click();
+        wait.until(ExpectedConditions.textToBePresentInElement(sectionHeader, "Memberships"));
     }
 
-	
+    /* ---------- VERIFICATION ---------- */
 
-	
-}
+    public String getSectionHeaderText() {
+        return sectionHeader.getText();
+    }
+
+	}

@@ -6,19 +6,9 @@
       <class name="testcases.MyInfoTest">
         <methods>
           <include name="beforeMethod"/>
-          <include name="verifyMyInfoPageLoaded"/>
-          <include name="tearDown"/>
-          <include name="verifyQualifications"/>
-          <include name="verifySalary"/>
-          <include name="verifyImmigration"/>
-          <include name="verifyReportTo"/>
-          <include name="verifyDependents"/>
           <include name="setUp"/>
-          <include name="verifyPersonalDetails"/>
+          <include name="tearDown"/>
           <include name="verifyMemberships"/>
-          <include name="setupTest"/>
-          <include name="verifyEmergencyContacts"/>
-          <include name="verifyJob"/>
         </methods>
       </class> <!-- testcases.MyInfoTest -->
     </classes>

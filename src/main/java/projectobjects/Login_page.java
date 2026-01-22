@@ -16,13 +16,13 @@ public class Login_page {
 
     // ================= WebElements ================= //
 
-    @FindBy(xpath = "//input[@placeholder='Username']")
+    @FindBy(xpath = "//input[@name='username']")
     private WebElement usernameInput;
 
-    @FindBy(xpath = "//input[@placeholder='Password']")
+    @FindBy(xpath = "//input[@name='password']")
     private WebElement passwordInput;
 
-    @FindBy(xpath = "//button[contains(@class,'orangehrm-login-button')]")
+    @FindBy(xpath = "//button[@type='submit']")
     private WebElement loginButton;
 
     @FindBy(xpath = "//p[text()='Forgot your password? ']")
@@ -39,7 +39,7 @@ public class Login_page {
     public Login_page(WebDriver driver) {
         this.driver = driver;
         PageFactory.initElements(driver, this);
-        wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        wait = new WebDriverWait(driver, Duration.ofSeconds(20));
     }
 
     // ================= Actions ================= //
@@ -62,9 +62,10 @@ public class Login_page {
     }
 
     public void login(String username, String password) {
-        enterUsername(username);
-        enterPassword(password);
-        clickLogin();
+        // Wait for visibility to ensure page is loaded
+        wait.until(ExpectedConditions.visibilityOf(usernameInput)).sendKeys(username);
+        passwordInput.sendKeys(password);
+        loginButton.click();
     }
 
     public void clickForgotPassword() {

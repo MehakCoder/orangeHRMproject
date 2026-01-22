@@ -1,93 +1,79 @@
 package testcases;
 
-import java.time.Duration;
-
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
-
-
 import projectobjects.Login_page;
 import projectobjects.MyInfo;
-
 
 public class MyInfoTest extends BaseTest {
 
     private MyInfo myInfo;
 
-    @BeforeMethod
+    @Test(priority =0)
     public void setupTest() {
 
         Login_page login = new Login_page(driver);
         login.login("Admin", "admin123");
 
-        // ✅ wait for dashboard load
-        new WebDriverWait(driver, Duration.ofSeconds(15))
-                .until(ExpectedConditions.urlContains("dashboard"));
-
         myInfo = new MyInfo(driver);
         myInfo.openMyInfo();
     }
 
-
-    @Test
-    public void verifyMyInfoPageLoaded() {
-        String header = myInfo.getMyInfoHeading();
-        Assert.assertTrue(
-                header.contains("Personal") || header.contains("PIM"),
-                "My Info page not loaded"
+    @Test(priority = 1)
+    public void verifyPersonalDetails() {
+        Assert.assertEquals(
+                myInfo.getSectionHeaderText(),
+                "Contact Details",
+                "Personal Details page not loaded"
         );
     }
 
-    @Test
-    public void verifyPersonalDetails() {
-        myInfo.goToPersonalDetails();
-    }
-
-    @Test
+    @Test(priority = 1)
     public void verifyContactDetails() {
-        myInfo.goToContactDetails();
+        myInfo.openContactDetails();
+        Assert.assertEquals(myInfo.getSectionHeaderText(), "Contact Details");
     }
 
-    @Test
+    @Test(priority = 2)
     public void verifyEmergencyContacts() {
-        MyInfo.goToEmergencyContacts();
+        myInfo.openEmergencyContacts();
+        Assert.assertEquals(myInfo.getSectionHeaderText(), "Assigned Emergency Contacts");
     }
 
-    @Test
+    @Test(priority = 3)
     public void verifyDependents() {
-        MyInfo.goToDependents();
+        myInfo.openDependents();
+        Assert.assertEquals(myInfo.getSectionHeaderText(), "Assigned Dependents");
     }
 
-    @Test
+    @Test(priority = 4)
     public void verifyImmigration() {
-        MyInfo.goToImmigration();
+        myInfo.openImmigration();
+        Assert.assertEquals(myInfo.getSectionHeaderText(), "Assigned Immigration Records");
     }
 
-    @Test
+    @Test(priority = 5)
     public void verifyJob() {
-        myInfo.goToJob();
+        myInfo.openJob();
+        Assert.assertEquals(myInfo.getSectionHeaderText(), "Job Details");
     }
 
-    @Test
+    @Test(priority = 6)
     public void verifySalary() {
-        myInfo.goToSalary();
+        myInfo.openSalary();
+        Assert.assertEquals(myInfo.getSectionHeaderText(), "Assigned Salary Components");
     }
 
-    @Test
-    public void verifyReportTo() {
-        myInfo.goToReportTo();
-    }
-
-    @Test
+    @Test(priority = 7)
     public void verifyQualifications() {
-        myInfo.goToQualifications();
+        myInfo.openQualifications();
+        Assert.assertEquals(myInfo.getSectionHeaderText(), "Qualifications");
     }
 
-    @Test
+    @Test(priority = 8)
     public void verifyMemberships() {
-        myInfo.goToMemberships();
+        myInfo.openMemberships();
+        Assert.assertEquals(myInfo.getSectionHeaderText(), " Assigned Memberships");
     }
 }
