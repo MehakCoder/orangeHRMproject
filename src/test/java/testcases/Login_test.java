@@ -11,6 +11,8 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
+import com.applitools.eyes.selenium.fluent.Target;
+
 import listeners.TestListener;
 import projectobjects.Login_page;
 
@@ -107,4 +109,5 @@ public class Login_test extends BaseTest {
                 "Dashboard page did not load after login"
         );
     }
+
 }
